@@ -15,20 +15,20 @@ public class FirstTest {
 
     @Before
     public void start() throws InterruptedException {
-        //инициализация драйвера
+//        инициализация драйвера -> System.setProperty("webdriver.chrome.driver","PATH"); + так еще можно
         driver = new ChromeDriver();
         //новый механизм установки неявных ожиданий (selenium>4.0)
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        //устанавливаем размер окна браузера
-        driver.manage().window().setSize(new Dimension(900,800));
+//        устанавливаем размер окна браузера
+        driver.manage().window().setSize(new Dimension(1100, 1100));
     }
 
     @Test
     public void myFirstTest() throws InterruptedException {
-        //открываем страницу
+//        открываем страницу
         driver.get("https://www.google.com/");
-        //Берем экранную клавиатуру и используем набор
+//        Берем экранную клавиатуру и используем набор
         driver.findElement(By.className("Umvnrc")).click();
         driver.findElement(By.id("K222")).click();
         driver.findElement(By.id("K78")).click();
@@ -36,6 +36,8 @@ public class FirstTest {
         driver.findElement(By.id("K32")).click();
         driver.findElement(By.className("Umvnrc")).click();
         driver.findElement(By.name("q")).sendKeys("webdriver");
+        // Явное ожидание 5с
+        Thread.sleep(5000);
         driver.findElement(By.name("btnK")).click();
     }
 
