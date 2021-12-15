@@ -30,7 +30,7 @@ public class FirstTest {
         driver.get("https://www.google.com/");
 //        Берем экранную клавиатуру и используем набор
         driver.findElement(By.className("Umvnrc")).click();
-        driver.findElement(By.id("K222")).click();
+        driver.findElement(By.cssSelector("#K222")).click();
         driver.findElement(By.id("K78")).click();
         driver.findElement(By.id("K74")).click();
         driver.findElement(By.id("K32")).click();
