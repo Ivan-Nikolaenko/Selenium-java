@@ -29,7 +29,6 @@ public class Wildberries {
         driver.findElement(By.cssSelector("#searchInput")).sendKeys("кроссовки мужские", Keys.ENTER);
         driver.findElement(By.cssSelector("[data-value='104']")).click();
         driver.findElement(By.cssSelector("[data-value='20624']")).click();
-        driver.findElement(By.cssSelector("[data-value='561922']")).click();
         if (driver.getPageSource().contains("По запросу «кроссовки мужские» найдено"))
             System.out.println("Text is present in the page");
         else
